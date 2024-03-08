@@ -1,0 +1,5 @@
+apiVersion: v2
+description: A Helm chart for a custom Minio Object store for AI Models
+- pattern
+name: minio
+version: 2023-06-19

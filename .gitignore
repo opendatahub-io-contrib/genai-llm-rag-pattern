@@ -1,0 +1,11 @@
+*~
+*.swp
+*.swo
+values-secret*
+.*.expected.yaml
+pattern-vault.init
+vault.init
+super-linter.log
+common/pattern-vault.init
+.DS_Store
+

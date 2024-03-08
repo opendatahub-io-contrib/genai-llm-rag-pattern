@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: PersistentVolumeClaim
+metadata:
+  name: tomc-minio-pvc
+spec:
+  accessModes:
+    - ReadWriteOnce
+  resources:
+    requests:
+      storage: 150Gi  
+#  storageClassName: gp2-csi
+  volumeMode: Filesystem     # Swap this for storageClassName if not running on AWS.
