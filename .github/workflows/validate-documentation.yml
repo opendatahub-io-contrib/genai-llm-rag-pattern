@@ -1,4 +1,4 @@
-name: ci
+name: Validate documentation
 on:
   pull_request:
     branches:
@@ -17,7 +17,7 @@ jobs:
     - run: pip install -r requirements.txt
     - run: pre-commit install
     - run: pre-commit run --all-files
-    - name: git diff
+    - name: git diff - to check for pre-commit errors
       if: always()
       run: git diff
 

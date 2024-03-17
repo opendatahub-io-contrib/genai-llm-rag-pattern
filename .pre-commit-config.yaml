@@ -10,7 +10,6 @@ repos:
     args: [--branch, main]
 - repo: https://github.com/executablebooks/mdformat
   rev: 0.7.17
-  exclude: "common/letsencrypt/README.md"
   hooks:
   - id: mdformat
     additional_dependencies:
