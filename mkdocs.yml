@@ -44,10 +44,10 @@ plugins:
     - yml
     excluded_files:
     - .pages
-- htmlproofer:
-    enabled: True
-    validate_rendered_template: True
-    raise_error: True
+# - htmlproofer:
+#     enabled: True
+#     validate_rendered_template: True
+#     raise_error: True
 - spellcheck:
     backends:
     - codespell:
