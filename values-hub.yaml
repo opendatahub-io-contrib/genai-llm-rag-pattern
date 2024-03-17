@@ -46,8 +46,7 @@ clusterGroup:
 
   projects:
   - hub
-  - config-demo
-  - hello-world
+  - rhoai
   # Explicitly mention the cluster-state based overrides we plan to use for this pattern.
   # We can use self-referential variables because the chart calls the tpl function with these variables defined
   sharedValueFiles:
@@ -94,6 +93,12 @@ clusterGroup:
       namespace: minio
       project: hub
       path: charts/all/minio
+
+    rhoai:
+      rhoai: rhoai
+      namespace: redhat-ods-operator
+      project: rhoai
+      path: charts/all/rhoai
   imperative:
     # NOTE: We *must* use lists and not hashes. As hashes lose ordering once parsed by helm
     # The default schedule is every 10 minutes: imperative.schedule
