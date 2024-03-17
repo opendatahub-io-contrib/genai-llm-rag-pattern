@@ -1,0 +1,1 @@
+{"config":{"lang":["en"],"separator":"[\\s\\-]+","pipeline":["stopWordFilter"]},"docs":[{"location":"developers/","title":"Developers","text":""},{"location":"developers/#pre-commit","title":"pre-commit","text":"<p>foo</p>"},{"location":"developers/#documentation-checks","title":"Documentation checks","text":"<p>bar</p>"}]}
