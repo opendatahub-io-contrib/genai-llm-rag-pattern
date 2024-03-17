@@ -1,0 +1,25 @@
+name: Validate documentation
+on:
+  pull_request:
+    branches:
+    - main
+  workflow_dispatch:
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
+      with:
+        fetch-depth: 0
+    - uses: actions/setup-python@v4
+      with:
+        python-version: 3.x
+    - run: pip install -r requirements.txt
+    - run: pre-commit install
+    - run: pre-commit run --all-files
+    - name: git diff - to check for pre-commit errors
+      if: always()
+      run: git diff
+
+    - run: sudo apt-get -y install libcairo2-dev libfreetype6-dev libffi-dev libjpeg-dev libpng-dev libz-dev
+    - run: mkdocs build -c -s

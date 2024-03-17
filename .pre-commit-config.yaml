@@ -1,0 +1,20 @@
+repos:
+- repo: https://github.com/pre-commit/pre-commit-hooks
+  rev: v4.5.0 # Use the ref you want to point at
+  hooks:
+  - id: check-merge-conflict
+  - id: check-case-conflict
+  # - id: check-yaml
+  #   args: ['--unsafe']
+  - id: no-commit-to-branch
+    args: [--branch, main]
+- repo: https://github.com/executablebooks/mdformat
+  rev: 0.7.17
+  hooks:
+  - id: mdformat
+    additional_dependencies:
+    - mdformat-tables
+    - mdformat-config
+    - mdformat-frontmatter
+    - mdformat-gfm
+    - mdformat-admon

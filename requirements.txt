@@ -1,0 +1,22 @@
+# Build dependencies for mkdocs
+PyGithub>=1.55
+pre-commit
+python-semantic-release
+mkdocs
+mkdocs-material[imaging]>=9.4.6
+markdown-include
+pymdown-extensions
+mkdocs-exclude
+mkdocs-unused-files>=0.1.6
+mkdocs-htmlproofer-plugin
+mkdocs-macros-plugin
+mkdocs-git-revision-date-localized-plugin
+beautifulsoup4
+##
+mkdocs-table-reader-plugin
+mkdocs-awesome-pages-plugin
+mkdocs-glightbox
+# Spellchecking
+mkdocs-spellcheck[all]
+pillow
+cairosvg
