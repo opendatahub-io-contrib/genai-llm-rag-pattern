@@ -1,4 +1,4 @@
-# rhoai-RAG-pattern.
+# rhoai-RAG-pattern
 
 Today a dominant usecase for deploying Large Language Models (LLMs) within the enteprise is as a enterprise search assistant. LLMs without any underlying context a prone to halucination. Retrieval Augmented Generation (RAG) is an architecture where the LLM is pared with a vector database. The vector database contains a specialised index of enterprise documents which provide 'context' to the LLM allowing more accurate results AND allowing employees to follow up with source documents. This project is a reference pattern for deploying a RAG search assistant built on top of Red Hat OpenShift AI.
 
@@ -18,6 +18,6 @@ Validated patterns currently includes significant boilerplate which will be stri
 The deployment method for validated pattenrs is [described here](https://validatedpatterns.io/patterns/multicloud-gitops/mcg-getting-started/).
 
 1. An OpenShift Cluster with
-   1. Cluster admin rights logged in with `oc` where the repo is cloned out
-   1. Connectivity through to github (or an equivalent git platform)
+   1. Cluster admin rights logged in with `oc` where the repository is cloned out
+   1. Connectivity through to GitHub (or an equivalent git platform)
    1. GPUs on at least one node within the cluster.
