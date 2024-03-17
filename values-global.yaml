@@ -1,5 +1,5 @@
 global:
-  pattern: rhoai-RAG-pattern
+  pattern: genai-llm-rag-pattern
   options:
     useCSV: false
     syncPolicy: Automatic

@@ -61,23 +61,23 @@ make EXTRA_HELM_OPTS="--set main.extraParameters[0].name=clusterGroup.subscripti
 Since 4.13 supports an internal registry that can cope with v2 docker manifests, we
 use that. Run `make iib` with the following environment variables set:
 
-* `INDEX_IMAGES=registry-proxy.engineering.redhat.com/rh-osbs/iib:492329`
-* `KUBEADMINPASS="11111-22222-33333-44444"`
+- `INDEX_IMAGES=registry-proxy.engineering.redhat.com/rh-osbs/iib:492329`
+- `KUBEADMINPASS="11111-22222-33333-44444"`
 
 ### OCP 4.12 and previous versions
 
 Due to the lack of v2 manifest support on the internal registry, we use an external
 registry. Run `make iib` with the following environment variables set:
 
-* `INDEX_IMAGES=registry-proxy.engineering.redhat.com/rh-osbs/iib:492329`
-* `REGISTRY=quay.io/rhn_support_mbaldess/iib`
-* `REGISTRY_TOKEN=<username>:<token>`
+- `INDEX_IMAGES=registry-proxy.engineering.redhat.com/rh-osbs/iib:492329`
+- `REGISTRY=quay.io/rhn_support_mbaldess/iib`
+- `REGISTRY_TOKEN=<username>:<token>`
 
 *Note*: For the REGISTRY_TOKEN go to your quay repository, add a robot with "Write" permissions. The robot created will have a "username" and "password" fields. Set the REGISTRY_TOKEN environment variable to that value.
 
 ## Useful commands
 
-* List IIBs for an operator:
+- List IIBs for an operator:
 
 ```sh
 ansible-playbook common/ansible/playbooks/iib-ci/lookup.yml
@@ -90,7 +90,7 @@ ok: [localhost] => (item=v4.13) => {
 
 Override the `operator` value with the desired bundle name to figure out the last IIBs for it.
 
-* List all images uploaded to the internal registry:
+- List all images uploaded to the internal registry:
 
 ```sh
 oc exec -it -n openshift-image-registry $(oc get pods -n openshift-image-registry -o json | jq -r '.items[].metadata.name | select(. | test("^image-registry-"))' | head -n1) -- bash -c "curl -k -u kubeadmin:$(oc whoami -t) https://localhost:5000/v2/_catalog"

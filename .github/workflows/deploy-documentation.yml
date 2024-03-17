@@ -1,0 +1,21 @@
+name: Deploy documentation
+on:
+  push:
+    branches:
+    - main
+  workflow_dispatch:
+permissions:
+  contents: write
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
+      with:
+        fetch-depth: 0
+    - uses: actions/setup-python@v4
+      with:
+        python-version: 3.x
+    - run: pip install -r requirements.txt
+    - run: sudo apt-get -y install libcairo2-dev libfreetype6-dev libffi-dev libjpeg-dev libpng-dev libz-dev
+    - run: mkdocs gh-deploy

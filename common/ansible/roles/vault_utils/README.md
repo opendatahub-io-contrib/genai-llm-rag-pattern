@@ -20,20 +20,20 @@ kubeconfig_backup: "{{ lookup('env', 'HOME') }}/.kube/config"
 Default values for vault configuration:
 
 ```yaml
-vault_ns: "vault"
-vault_pod: "vault-0"
-vault_hub: "hub"
+vault_ns: vault
+vault_pod: vault-0
+vault_hub: hub
 vault_hub_kubernetes_host: https://$KUBERNETES_PORT_443_TCP_ADDR:443
 # Needs extra escaping due to how it gets injected via shell in the vault
 vault_hub_capabilities: '[\\\"read\\\"]'
-vault_base_path: "secret"
-vault_path: "{{ vault_base_path }}/{{ vault_hub }}"
-vault_hub_ttl: "15m"
-vault_pki_max_lease_ttl: "8760h"
+vault_base_path: secret
+vault_path: '{{ vault_base_path }}/{{ vault_hub }}'
+vault_hub_ttl: 15m
+vault_pki_max_lease_ttl: 8760h
 external_secrets_ns: golang-external-secrets
 external_secrets_sa: golang-external-secrets
-unseal_secret: "vaultkeys"
-unseal_namespace: "imperative"
+unseal_secret: vaultkeys
+unseal_namespace: imperative
 ```
 
 ## Dependencies
@@ -63,7 +63,6 @@ decrypt them will be prompted when needed.
 Here is a well-commented example of a version 1.0 file:
 
 ```yaml
----
 # By default when a top-level 'version: 1.0' is missing it is assumed to be '1.0'
 # NEVER COMMIT THESE VALUES TO GIT
 
@@ -151,75 +150,74 @@ secrets:
     vaultMount: secret
     # These represent the paths inside the vault maint
     vaultPrefixes:
-    - region-one
-    - snowflake.blueprints.rhecoeng.com
+      - region-one
+      - snowflake.blueprints.rhecoeng.com
     fields:
-    - name: secret
-      onMissingValue: generate # One of: error,generate,prompt (generate is only valid for normal secrets)
+      - name: secret
+        onMissingValue: generate # One of: error,generate,prompt (generate is only valid for normal secrets)
       # This override attribute is false by default. The attribute is only valid with 'generate'. If the secret already exists in the
       # vault it won't be changed unless override is set to true
-      override: true
-      vaultPolicy: basicPolicy
-    - name: secretprompt
-      value: null
-      onMissingValue: prompt # when prompting for something you need to set either value: null or path: null as
+        override: true
+        vaultPolicy: basicPolicy
+      - name: secretprompt
+        value:
+        onMissingValue: prompt # when prompting for something you need to set either value: null or path: null as
                              # we need to know if it is a secret plaintext or a file path
-      description: "Please specify the password for application ABC"
-    - name: secretprompt2
-      value: defaultvalue
-      onMissingValue: prompt
-      description: "Please specify the API key for XYZ"
-    - name: secretprompt3
-      onMissingValue: generate
-      vaultPolicy: validatedPatternDefaultPolicy  # This is an always-existing hard-coded policy
-    - name: secretfile
-      path: /tmp/ca.crt
-      onMissingValue: prompt
-      description: "Insert path to Certificate Authority"
-    - name: ca_crt
-      path: /tmp/ca.crt
-      onMissingValue: error # One of error, prompt (for path). generate makes no sense for file
-    - name: ca_crt_b64
-      path: /tmp/ca.crt
-      base64: true # defaults to false
-      onMissingValue: prompt # One of error, prompt (for path). generate makes no sense for file
+        description: Please specify the password for application ABC
+      - name: secretprompt2
+        value: defaultvalue
+        onMissingValue: prompt
+        description: Please specify the API key for XYZ
+      - name: secretprompt3
+        onMissingValue: generate
+        vaultPolicy: validatedPatternDefaultPolicy # This is an always-existing hard-coded policy
+      - name: secretfile
+        path: /tmp/ca.crt
+        onMissingValue: prompt
+        description: Insert path to Certificate Authority
+      - name: ca_crt
+        path: /tmp/ca.crt
+        onMissingValue: error # One of error, prompt (for path). generate makes no sense for file
+      - name: ca_crt_b64
+        path: /tmp/ca.crt
+        base64: true # defaults to false
+        onMissingValue: prompt # One of error, prompt (for path). generate makes no sense for file
 
   - name: config-demo2
     vaultPrefixes:
-    - region-one
-    - snowflake.blueprints.rhecoeng.com
+      - region-one
+      - snowflake.blueprints.rhecoeng.com
     fields:
-    - name: ca_crt2
-      path: /tmp/ca.crt # this will be the default shown when prompted
-      description: "Specify the path for ca_crt2"
-      onMissingValue: prompt # One of error, prompt (for path). generate makes no sense for file
-    - name: ca_crt
-      path: /tmp/ca.crt
-      onMissingValue: error # One of error, prompt (for path). generate makes no sense for file
+      - name: ca_crt2
+        path: /tmp/ca.crt # this will be the default shown when prompted
+        description: Specify the path for ca_crt2
+        onMissingValue: prompt # One of error, prompt (for path). generate makes no sense for file
+      - name: ca_crt
+        path: /tmp/ca.crt
+        onMissingValue: error # One of error, prompt (for path). generate makes no sense for file
 
   # The following will read the ini-file at ~/.aws/credentials and place the ini_key "[default]/aws_access_key_id"
   # in the aws_access_key_id_test vault attribute in the secret/hub/awsexample path
   - name: awsexample
     fields:
-    - name: aws_access_key_id_test
-      ini_file: ~/.aws/credentials
-      ini_section: default
-      ini_key: aws_access_key_id
-    - name: aws_secret_access_key_test
-      ini_file: ~/.aws/credentials
-      ini_key: aws_secret_access_key
+      - name: aws_access_key_id_test
+        ini_file: ~/.aws/credentials
+        ini_section: default
+        ini_key: aws_access_key_id
+      - name: aws_secret_access_key_test
+        ini_file: ~/.aws/credentials
+        ini_key: aws_secret_access_key
 ```
 
-Internals
----------
+## Internals
 
 Here is the rough high-level algorithm used to unseal the vault:
 
 1. Check vault status. If vault is not initialized go to 2. If initialized go to 3.
-2. Initialize vault and store unseal keys + login token inside a secret in k8s
-3. Check vault status. If vault is unsealed go to 5. else to to 4.
-4. Unseal the vault using the secrets read from the k8s secret
-5. Configure the vault (should be idempotent)
+1. Initialize vault and store unseal keys + login token inside a secret in k8s
+1. Check vault status. If vault is unsealed go to 5. else to to 4.
+1. Unseal the vault using the secrets read from the k8s secret
+1. Configure the vault (should be idempotent)
 
 ## License
 
