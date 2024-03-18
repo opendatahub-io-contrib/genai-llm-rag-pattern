@@ -98,7 +98,7 @@ clusterGroup:
       path: charts/all/minio
 
     rhoai:
-      rhoai: rhoai
+      name: rhoai
       namespace: redhat-ods-operator
       project: hub
       path: charts/all/rhoai
