@@ -9,6 +9,7 @@ clusterGroup:
   - openshift-pipelines
   - openshift-nfd
   - minio
+  - minio-operator
   - nvidia-gpu-operator
   - openshift-serverless
   subscriptions:
@@ -93,7 +94,7 @@ clusterGroup:
 
     minio:
       name: minio
-      namespace: minio
+      namespace: minio-operator
       project: hub
       path: charts/all/minio
 
