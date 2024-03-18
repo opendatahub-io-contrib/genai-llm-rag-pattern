@@ -78,16 +78,19 @@ clusterGroup:
         kind: ManagedClusterInfo
         jsonPointers:
         - /spec/loggingCA
+
     vault:
       name: vault
       namespace: vault
       project: hub
       path: common/hashicorp-vault
+
     golang-external-secrets:
       name: golang-external-secrets
       namespace: golang-external-secrets
       project: hub
       path: common/golang-external-secrets
+
     minio:
       name: minio
       namespace: minio
@@ -99,6 +102,7 @@ clusterGroup:
       namespace: redhat-ods-operator
       project: rhoai
       path: charts/all/rhoai
+
   imperative:
     # NOTE: We *must* use lists and not hashes. As hashes lose ordering once parsed by helm
     # The default schedule is every 10 minutes: imperative.schedule
