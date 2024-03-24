@@ -11,3 +11,38 @@ minioRootCreds:
 
 
 # Begin global parameters
+
+
+# tenant:
+#   name:
+#   pools:
+#     servers: 1
+#     name:
+#     size:
+#     volumesPerServer:
+#   metrics:
+#   features:
+#   buckets:
+#   - name: my-minio-bucket
+#       # objectLock: false        # optional
+#       # region: us-east-1
+#   users:
+#   - 
+
+
+operator:
+  operator:
+    env:
+      MINIO_OPERATOR_RUNTIME: OpenShift
+    securityContext:
+      runAsUser: 1000770000
+      runAsGroup: 1000770000
+      fsGroup: 1000770000
+    containerSecurityContext:
+      runAsUser: 1000770000
+      runAsGroup: 1000770000
+  console:
+    securityContext:
+      runAsUser: 1000770000
+    containerSecurityContext:
+      runAsUser: 1000770000
