@@ -33,7 +33,8 @@ minioRootCreds:
 operator:
   operator:
     env:
-      MINIO_OPERATOR_RUNTIME: OpenShift
+    - name: "MINIO_OPERATOR_RUNTIME"
+      value: "OpenShift"
     securityContext:
       runAsUser: 1000770000
       runAsGroup: 1000770000
