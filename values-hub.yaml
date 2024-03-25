@@ -12,6 +12,8 @@ clusterGroup:
   - minio-operator
   - nvidia-gpu-operator
   - openshift-serverless
+  - redis
+  #- rhdh-operator 
   subscriptions:
     rhoai:
       name: rhods-operator
@@ -40,6 +42,18 @@ clusterGroup:
       namespace: nvidia-gpu-operator
       channel: stable
       source: certified-operators
+
+    redis:
+      name: redis-enterprise-operator-cert
+      namespace: redis
+      channel: production
+      source: certified-operators
+
+    rhdh:
+      name: rhdh
+      namespace: rhdh-operator
+      channel: fast
+      source: edhat-operators
 
   projects:
   - hub
