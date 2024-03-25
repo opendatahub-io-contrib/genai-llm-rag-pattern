@@ -12,6 +12,9 @@ supplementalGroups:
   type: RunAsAny
 fsGroup:
   type: MustRunAs
+  ranges:
+    - min: 1000
+      max: 1000
 volumes:
 - configMap
 - downwardAPI
