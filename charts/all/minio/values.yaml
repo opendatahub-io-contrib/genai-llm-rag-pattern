@@ -13,21 +13,7 @@ minioRootCreds:
 # Begin global parameters
 
 
-# tenant:
-#   name:
-#   pools:
-#     servers: 1
-#     name:
-#     size:
-#     volumesPerServer:
-#   metrics:
-#   features:
-#   buckets:
-#   - name: my-minio-bucket
-#       # objectLock: false        # optional
-#       # region: us-east-1
-#   users:
-#   - 
+
 
 
 operator:
@@ -47,3 +33,20 @@ operator:
       runAsUser: 1000770000
     containerSecurityContext:
       runAsUser: 1000770000
+
+tenant:
+  tenant:
+    name: my-minio-tenant
+    pools:
+      servers: 1
+      name: mypool
+      size: 20Gi
+      volumesPerServer: 3
+    # metrics:
+    # features:
+    buckets:
+    - name: my-minio-bucket
+      # objectLock: false        # optional
+      # region: us-east-1
+    # users:
+    # -
