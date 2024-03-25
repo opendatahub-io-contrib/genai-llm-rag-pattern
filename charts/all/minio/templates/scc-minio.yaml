@@ -24,3 +24,4 @@ volumes:
 users:
 - system:serviceaccount:minio-operator:minio-operator
 - system:serviceaccount:minio-operator:console-sa
+- system.serviceaccount:minio-operator:{{ .Values.tenant.tenant.name }}-sa
