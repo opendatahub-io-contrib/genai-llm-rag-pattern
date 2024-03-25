@@ -38,7 +38,7 @@ tenant:
   tenant:
     name: my-minio-tenant
     pools:
-      servers: 1
+    - servers: 1
       name: mypool
       size: 20Gi
       volumesPerServer: 3
