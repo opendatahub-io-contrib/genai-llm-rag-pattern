@@ -21,18 +21,18 @@ operator:
     env:
     - name: "MINIO_OPERATOR_RUNTIME"
       value: "OpenShift"
-    securityContext:
-      runAsUser: 1000770000
-      runAsGroup: 1000770000
-      fsGroup: 1000770000
-    containerSecurityContext:
-      runAsUser: 1000770000
-      runAsGroup: 1000770000
-  console:
-    securityContext:
-      runAsUser: 1000770000
-    containerSecurityContext:
-      runAsUser: 1000770000
+      #   securityContext:
+      #     runAsUser: 1000770000
+      #     runAsGroup: 1000770000
+      #     fsGroup: 1000770000
+      #   containerSecurityContext:
+      #     runAsUser: 1000770000
+      #     runAsGroup: 1000770000
+      # console:
+      #   securityContext:
+      #     runAsUser: 1000770000
+      #   containerSecurityContext:
+      #     runAsUser: 1000770000
 
 tenant:
   tenant:

@@ -20,3 +20,4 @@ volumes:
 - secret
 users:
 - system:serviceaccount:minio-operator:minio-operator
+- system:serviceaccount:minio-operator:console-sa
