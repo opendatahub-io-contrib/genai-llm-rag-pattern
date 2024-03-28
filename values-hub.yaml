@@ -26,7 +26,6 @@ clusterGroup:
 
     serverless:
       channel: stable
-      namespace: openshift-serverless
       name: serverless-operator
 
     servicemesh:
