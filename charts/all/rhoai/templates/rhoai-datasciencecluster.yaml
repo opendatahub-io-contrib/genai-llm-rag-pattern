@@ -17,7 +17,9 @@ spec:
       serving:
         ingressGateway:
           certificate:
+            secretName: kserve-serving-cert
             type: SelfSigned
+
         managementState: Managed
         name: knative-serving
       managementState: Managed
