@@ -48,11 +48,11 @@ clusterGroup:
       channel: production
       source: certified-operators
 
-    rhdh:
-      name: rhdh
-      namespace: rhdh-operator
-      channel: fast
-      source: edhat-operators
+    # rhdh:
+    #   name: rhdh
+    #   namespace: rhdh-operator
+    #   channel: fast
+    #   source: edhat-operators
 
   projects:
   - hub
