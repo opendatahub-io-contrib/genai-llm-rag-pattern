@@ -13,7 +13,7 @@ clusterGroup:
   - nvidia-gpu-operator
   - openshift-serverless
   - redis
-  #- rhdh-operator 
+  - rhdh-operator
   subscriptions:
     rhoai:
       name: rhods-operator
