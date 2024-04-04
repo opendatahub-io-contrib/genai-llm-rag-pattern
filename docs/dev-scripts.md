@@ -1,7 +1,3 @@
----
-title: Development scripts
----
-
 # Development scripts
 
 These scripts are useful for development and automation where the gap has not been completely closed.
