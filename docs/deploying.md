@@ -1,5 +1,5 @@
 ---
-title: Deploying the RAG pattern.
+title: Deploying the RAG pattern
 ---
 
 ## Assumptions
