@@ -6,24 +6,23 @@ title: User stories
 
 The intent of these user stories is to provide a north star for this project.
 
-
 ## Actors
 
-- Application Developer:  
+- Application Developer:
 
-- Business application owner:  
-The Business Application Owner is concerned with the business value the LLM delivers.
+- Business application owner:\
+  The Business Application Owner is concerned with the business value the LLM delivers.
 
-- Data engineer:  
-The Data Engineer actor is responsible for accessing, importing, and preparing data that is used by the LLM.
+- Data engineer:\
+  The Data Engineer actor is responsible for accessing, importing, and preparing data that is used by the LLM.
 
-- Data scientist:  
+- Data scientist:
 
-- Platform engineer:  
+- Platform engineer:
 
-- Security architect:  
+- Security architect:
 
-- Security engineer:  
+- Security engineer:
 
 ## User stories
 
@@ -44,4 +43,3 @@ The Data Engineer actor is responsible for accessing, importing, and preparing d
 - As a Security Architect I want to be able to measure and enforce that all software, models, and data come from trusted sources.
 
 - As a SOC analyst I want sufficient capabilities to detect, investigate and correct security related events as they apply to the LLM platform and workloads
-
