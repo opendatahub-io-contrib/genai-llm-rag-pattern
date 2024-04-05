@@ -18,7 +18,7 @@ The intent of these user stories is to provide a north star for this project.
 
 - As a data scientist I want ready access to the latest opensource LLM innovations without getting in trouble with security.
 
-- As an platform engineer I want to provide a platform enabling self-service for LLM development from experiment to production, while maintaining efficient use of the infrastructure (aaS) investment
+- As an platform engineer I want to provide a platform enabling self-service for LLM development from experiment to production, while maintaining efficient use of the infrastructure (as a service) investment
 
 - As a security architect I want my LLM development to meet my enterprise wide security policies and controls.
 
