@@ -20,4 +20,9 @@
          <lastmod>2024-04-05</lastmod>
          <changefreq>daily</changefreq>
     </url>
+    <url>
+         <loc>https://opendatahub-io-contrib.github.io/genai-llm-rag-pattern/user-stories/</loc>
+         <lastmod>2024-04-05</lastmod>
+         <changefreq>daily</changefreq>
+    </url>
 </urlset>
