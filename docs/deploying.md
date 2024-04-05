@@ -1,5 +1,5 @@
 ---
-title: Deploying the RAG pattern.
+title: Deploying the RAG pattern
 ---
 
 ## Assumptions
@@ -23,4 +23,6 @@ This works where:
 1. The cluster auto-scaler is enabled (e.g. using the assisted installer into your own tenancy on AWS / GCP)
 1. Clusters managed via OpenShift Cluster Manager (e.g. ROSA, ARO and OSD)
 
-### Manual setup steps on OSD.
+### Manual setup steps on OSD
+
+TBC

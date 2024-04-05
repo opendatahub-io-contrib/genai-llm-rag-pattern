@@ -7,7 +7,7 @@ secretStore:
 
 # Secret provisioned for the AWS Controller for Kubernetes - S3 
 minioRootCreds:
-  key: secret/data/global/minio_root
+  key: secret/data/global/minio_tenant_root
 
 
 # Begin global parameters
