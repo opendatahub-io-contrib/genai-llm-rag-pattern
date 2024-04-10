@@ -1,7 +1,7 @@
 <!-- PROJECT LOGO -->
 <br />
 <div align="center">
-  <a href="https://github.com/othneildrew/Best-README-Template">
+  <a href="https://github.com/opendatahub-io-contrib/genai-llm-rag-pattern">
     <img src="images/Logo_RAG_LLM_Pattern.png" alt="Logo" width="160" height="160">
   </a>
 
@@ -9,14 +9,14 @@
   
   <p align="center">
     <br />
-    <a href="https://github.com/othneildrew/Best-README-Template"><strong>Explore the docs »</strong></a>
+    <a href="https://github.com/opendatahub-io-contrib/genai-llm-rag-pattern"><strong>Explore the docs »</strong></a>
     <br />
     <br />
-    <a href="https://github.com/othneildrew/Best-README-Template">View Demo</a>
+    <a href="https://github.com/opendatahub-io-contrib/genai-llm-rag-pattern">View Demo</a>
     ·
-    <a href="https://github.com/othneildrew/Best-README-Template/issues/new?labels=bug&template=bug-report---.md">Report Bug</a>
+    <a href="https://github.com/opendatahub-io-contrib/genai-llm-rag-pattern/issues/new?labels=bug&template=bug-report---.md">Report Bug</a>
     ·
-    <a href="https://github.com/othneildrew/Best-README-Template/issues/new?labels=enhancement&template=feature-request---.md">Request Feature</a>
+    <a href="https://github.com/opendatahub-io-contrib/genai-llm-rag-pattern/issues/new?labels=enhancement&template=feature-request---.md">Request Feature</a>
   </p>
 </div>
 
