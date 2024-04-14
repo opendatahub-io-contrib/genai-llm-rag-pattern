@@ -1,4 +1,5 @@
 markdown_extensions:
+- def_list
 - attr_list
 - admonition
 - footnotes
