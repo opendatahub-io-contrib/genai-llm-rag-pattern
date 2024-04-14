@@ -4,7 +4,7 @@ This page contains essential information for developers who are contributing to 
 
 ## pre-commit
 
-This project uses [`pre-commit`](https://pre-commit.com/) as a mechanism to ensure code quality. `pre-commit` is enforced on pull requests as part of the CI pipeline. Installing pre-commit into a developers environment ensures that the quality checks will pass before code is pushed to github.
+This project uses [`pre-commit`](https://pre-commit.com/) as a mechanism to ensure code quality. `pre-commit` is enforced on pull requests as part of the CI pipeline. Installing pre-commit into a developers environment ensures that the quality checks will pass before code is pushed to GitHub.
 
 Install by:
 
@@ -17,13 +17,13 @@ developers can force `pre-commit` to run across all files by running `pre-commit
 
 ## Documentation continuous integration checks
 
-As part of the GitHub actions CICD projects there are a number of checks which inspect markdown documents.
+As part of the GitHub actions CICD projects there are a number of checks which inspect Markdown documents.
 
 Validation can fail for a number of reasons:
 
 1. Spelling mistakes including use of colloquial terms e.g. `repo` versus `repository` by the `superlinter`
 1. Markdown document structure, enforced by the `pre-commit` and by the `superlinter`
-1. Unlinked or dead links in the documentatuon website.
+1. Unlinked or dead links in the documentation site.
 
 ### Dealing with unexpected spelling 'mistakes'
 
