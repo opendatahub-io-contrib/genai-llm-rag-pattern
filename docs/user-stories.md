@@ -10,10 +10,12 @@ The intent of these user stories is to provide a north star for this project.
 
 - Application Developer:
 
-- Business application owner:\
+- Business application owner:
+
   The Business Application Owner is concerned with the business value the LLM delivers.
 
-- Data engineer:\
+- Data engineer:
+
   The Data Engineer actor is responsible for accessing, importing, and preparing data that is used by the LLM.
 
 - Data scientist:
