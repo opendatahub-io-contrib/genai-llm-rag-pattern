@@ -9,14 +9,14 @@
   
   <p align="center">
     <br />
-    <a href="https://github.com/opendatahub-io-contrib/genai-llm-rag-pattern"><strong>Explore the docs »</strong></a>
+    <a href="https://opendatahub-io-contrib.github.io/genai-llm-rag-pattern/"><strong>Explore the docs »</strong></a>
     <br />
     <br />
     <a href="https://github.com/opendatahub-io-contrib/genai-llm-rag-pattern">View Demo</a>
     ·
-    <a href="https://github.com/opendatahub-io-contrib/genai-llm-rag-pattern/issues/new?labels=bug&template=bug-report---.md">Report Bug</a>
+    <a href="https://github.com/opendatahub-io-contrib/genai-llm-rag-pattern">Report Bug</a>
     ·
-    <a href="https://github.com/opendatahub-io-contrib/genai-llm-rag-pattern/issues/new?labels=enhancement&template=feature-request---.md">Request Feature</a>
+    <a href="https://github.com/opendatahub-io-contrib/genai-llm-rag-pattern">Request Feature</a>
   </p>
 </div>
 
@@ -87,11 +87,8 @@ Don't forget to give the project a star! Thanks again!
 <!-- LICENSE -->
 ## License
 
-Distributed under the Apache-2.0 License. See `LICENSE.txt` for more information.
+Distributed under the Apache-2.0 License. See `LICENSE` for more information.
 
 <p align="right">(<a href="#readme-top">back to top</a>)</p>
 
 
-<!-- MARKDOWN LINKS & IMAGES -->
-<!-- https://www.markdownguide.org/basic-syntax/#reference-style-links -->
-[product-screenshot]: images/screenshot.png
