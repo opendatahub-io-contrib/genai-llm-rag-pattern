@@ -13,7 +13,7 @@ pip install pre-commit
 pre-commit install 
 ```
 
-developers can force `pre-commit` to run across all files by runnign `pre-commit run --all-files`. This will ensure every file is covered, including those which have already being commited. Standard runs will only check files with a change in git.
+developers can force `pre-commit` to run across all files by running `pre-commit run --all-files`. This will ensure every file is covered, including those which have already being committed. Standard runs will only check files with a change in git.
 
 ## Documentation continuous integration checks
 
