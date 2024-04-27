@@ -1,0 +1,50 @@
+apiVersion: noobaa.io/v1alpha1
+kind: BucketClass
+metadata:
+  name: default-bucket
+    - apiVersion: noobaa.io/v1alpha1
+      fieldsType: FieldsV1
+      fieldsV1:
+        'f:spec':
+          .: {}
+          'f:placementPolicy':
+            .: {}
+            'f:tiers': {}
+      manager: Mozilla
+      operation: Update
+      time: '2024-04-27T07:20:12Z'
+    - apiVersion: noobaa.io/v1alpha1
+      fieldsType: FieldsV1
+      fieldsV1:
+        'f:metadata':
+          'f:finalizers':
+            .: {}
+            'v:"noobaa.io/finalizer"': {}
+          'f:labels':
+            .: {}
+            'f:app': {}
+      manager: noobaa-operator
+      operation: Update
+      time: '2024-04-27T07:20:12Z'
+    - apiVersion: noobaa.io/v1alpha1
+      fieldsType: FieldsV1
+      fieldsV1:
+        'f:status':
+          .: {}
+          'f:conditions': {}
+          'f:phase': {}
+      manager: noobaa-operator
+      operation: Update
+      subresource: status
+      time: '2024-04-27T07:20:15Z'
+  namespace: openshift-storage
+  finalizers:
+    - noobaa.io/finalizer
+  labels:
+    app: noobaa
+spec:
+  placementPolicy:
+    tiers:
+      - backingStores:
+          - local-backingstore
+        placement: Spread

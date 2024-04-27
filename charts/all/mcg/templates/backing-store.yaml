@@ -1,0 +1,18 @@
+apiVersion: noobaa.io/v1alpha1
+kind: BackingStore
+metadata:
+  name: local-backingstore
+  namespace: openshift-storage
+  finalizers:
+    - noobaa.io/finalizer
+  labels:
+    app: noobaa
+spec:
+  pvPool:
+    numVolumes: 3
+    resources:
+      requests:
+        storage: 50Gi
+    secret: {}
+    storageClass: gp3
+  type: pv-pool
