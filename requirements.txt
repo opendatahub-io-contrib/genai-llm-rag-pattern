@@ -20,4 +20,3 @@ mkdocs-glightbox
 mkdocs-spellcheck[all]
 pillow
 cairosvg
-compliance-trestle
