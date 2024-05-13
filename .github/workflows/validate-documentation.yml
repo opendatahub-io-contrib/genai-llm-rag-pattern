@@ -31,8 +31,8 @@ jobs:
         fetch-depth: 0
     - uses: actions/setup-python@v5
       with:
-        python-version: '3.11'
-    - run: pip install -r requirements.txt
+        python-version: 3.x
+    - run: pip install compliance-trestle
     - name: validate ADRs with trestle
       working-directory: docs  
       run: trestle author docs validate -tn ADR -hv
