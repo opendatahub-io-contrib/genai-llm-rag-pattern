@@ -23,3 +23,16 @@ jobs:
 
     - run: sudo apt-get -y install libcairo2-dev libfreetype6-dev libffi-dev libjpeg-dev libpng-dev libz-dev
     - run: mkdocs build -c -s
+  adr-validate:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v4
+      with:
+        fetch-depth: 0
+    - uses: actions/setup-python@v5
+      with:
+        python-version: 3.x
+    - run: pip install -r requirements.txt
+    - name: validate ADRs with trestle
+      working-directory: docs  
+      run: trestle author docs validate -tn ADR -hv
