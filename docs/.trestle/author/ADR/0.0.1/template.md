@@ -1,6 +1,5 @@
 ---
 x-trestle-template-version: 0.0.1
-title: 'ADR 000: My title'
 ---
 
 # { A Title which is ignored because it in braces }
