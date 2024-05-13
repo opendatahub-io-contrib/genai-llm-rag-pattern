@@ -4,7 +4,17 @@ global:
     useCSV: false
     syncPolicy: Automatic
     installPlanApproval: Automatic
+
 main:
   clusterGroupName: hub
   multiSourceConfig:
     enabled: true
+
+objectStorage:
+  replicas: 3
+  storagePool: 50Gi
+  
+  odfStorageClass: ""
+  backingStorageClass: ""
+
+

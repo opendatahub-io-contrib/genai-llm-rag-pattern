@@ -2,6 +2,10 @@
 title: Deploying the RAG pattern
 ---
 
+## Overview
+
+This project uses the [validated patterns operator](https://validatedpatterns.io), an opinionated gitops system, to deploy onto an OpenShift cluster.
+
 ## Assumptions
 
 ### GPUs
@@ -23,6 +27,28 @@ This works where:
 1. The cluster auto-scaler is enabled (e.g. using the assisted installer into your own tenancy on AWS / GCP)
 1. Clusters managed via OpenShift Cluster Manager (e.g. ROSA, ARO and OSD)
 
-### Manual setup steps on OSD
+### Bootstrap machine
 
-TBC
+`git` and `podman` are required on the bootstrap machine.
+A valid `KUBECONFIG` is required making `oc` (recommended) or `kubectl` strongly recommended.
+
+## Setup workflow
+
+1. Start `podman`
+
+1. **Fork** the [git repository](https://github.com/opendatahub-io-contrib/genai-llm-rag-pattern)
+
+   1. Forking is required in order to customise the configuration.
+   1. It is significantly easier to start with a public repository.
+
+1. Clone the forked git repository.
+
+1. Customise the `values-global.yaml` (see below)
+
+1. `cp ./values-secret.yaml.template ~/values-secret-gen-llm-rag-pattern.yaml` and fill in required secrets
+
+1. `cd` into the repository and `./pattern.sh make install`
+
+## REQUIRED configuration in order to function
+
+### Multi cloud object gateway
