@@ -32,7 +32,7 @@ jobs:
     - uses: actions/setup-python@v5
       with:
         python-version: 3.x
-    - run: pip install compliance-trestle
+    - run: pip install compliance-trestle setuptools # Currently trestle conflicts with other libraries, setuptools required for 3.12 and above
     - name: validate ADRs with trestle
       working-directory: docs  
       run: trestle author docs validate -tn ADR -hv
