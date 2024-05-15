@@ -10,28 +10,26 @@
       
       
       
-        <link rel="canonical" href="https://opendatahub-io-contrib.github.io/genai-llm-rag-pattern/deploying/">
+        <link rel="canonical" href="https://opendatahub-io-contrib.github.io/genai-llm-rag-pattern/ADR/ADR_000/">
       
       
-        <link rel="prev" href="..">
+        <link rel="prev" href="../">
       
       
-        <link rel="next" href="../dev-scripts/">
       
-      
-      <link rel="icon" href="../assets/images/favicon.png">
+      <link rel="icon" href="../../assets/images/favicon.png">
       <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.22">
     
     
       
-        <title>Deploying the RAG pattern - Generative AI LLM RAG Pattern</title>
+        <title>This title can be changed, please make it of the form ADR 000: title - Generative AI LLM RAG Pattern</title>
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.732c4fb1.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.732c4fb1.min.css">
       
         
-        <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
+        <link rel="stylesheet" href="../../assets/stylesheets/palette.06af60db.min.css">
       
       
 
@@ -50,7 +48,7 @@
       
     
     
-    <script>__md_scope=new URL("..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    <script>__md_scope=new URL("../..",location),__md_hash=e=>[...e].reduce((e,_)=>(e<<5)-e+_.charCodeAt(0),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
     
       
 
@@ -59,11 +57,11 @@
       
         <meta  property="og:type"  content="website" >
       
-        <meta  property="og:title"  content="Deploying the RAG pattern - Generative AI LLM RAG Pattern" >
+        <meta  property="og:title"  content="This title can be changed, please make it of the form `ADR 000: title` - Generative AI LLM RAG Pattern" >
       
         <meta  property="og:description"  content="Generative AI Language Model RAG Pattern for Red Hat OpenShift AI" >
       
-        <meta  property="og:image"  content="https://opendatahub-io-contrib.github.io/genai-llm-rag-pattern/assets/images/social/deploying.png" >
+        <meta  property="og:image"  content="https://opendatahub-io-contrib.github.io/genai-llm-rag-pattern/assets/images/social/ADR/ADR_000.png" >
       
         <meta  property="og:image:type"  content="image/png" >
       
@@ -71,15 +69,15 @@
       
         <meta  property="og:image:height"  content="630" >
       
-        <meta  property="og:url"  content="https://opendatahub-io-contrib.github.io/genai-llm-rag-pattern/deploying/" >
+        <meta  property="og:url"  content="https://opendatahub-io-contrib.github.io/genai-llm-rag-pattern/ADR/ADR_000/" >
       
         <meta  name="twitter:card"  content="summary_large_image" >
       
-        <meta  name="twitter:title"  content="Deploying the RAG pattern - Generative AI LLM RAG Pattern" >
+        <meta  name="twitter:title"  content="This title can be changed, please make it of the form `ADR 000: title` - Generative AI LLM RAG Pattern" >
       
         <meta  name="twitter:description"  content="Generative AI Language Model RAG Pattern for Red Hat OpenShift AI" >
       
-        <meta  name="twitter:image"  content="https://opendatahub-io-contrib.github.io/genai-llm-rag-pattern/assets/images/social/deploying.png" >
+        <meta  name="twitter:image"  content="https://opendatahub-io-contrib.github.io/genai-llm-rag-pattern/assets/images/social/ADR/ADR_000.png" >
       
     
     
@@ -102,7 +100,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#assumptions" class="md-skip">
+        <a href="#this-title-can-be-changed-please-make-it-of-the-form-adr-000-title" class="md-skip">
           Skip to content
         </a>
       
@@ -118,7 +116,7 @@
 
 <header class="md-header md-header--shadow md-header--lifted" data-md-component="header">
   <nav class="md-header__inner md-grid" aria-label="Header">
-    <a href=".." title="Generative AI LLM RAG Pattern" class="md-header__button md-logo" aria-label="Generative AI LLM RAG Pattern" data-md-component="logo">
+    <a href="../.." title="Generative AI LLM RAG Pattern" class="md-header__button md-logo" aria-label="Generative AI LLM RAG Pattern" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m20 22-3.86-1.55c.7-1.53 1.2-3.11 1.51-4.72L20 22M7.86 20.45 4 22l2.35-6.27c.31 1.61.81 3.19 1.51 4.72M12 2s5 2 5 10c0 3.1-.75 5.75-1.67 7.83A2 2 0 0 1 13.5 21h-3a2 2 0 0 1-1.83-1.17C7.76 17.75 7 15.1 7 12c0-8 5-10 5-10m0 10c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2Z"/></svg>
@@ -138,7 +136,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Deploying the RAG pattern
+              This title can be changed, please make it of the form ADR 000: title
             
           </span>
         </div>
@@ -239,7 +237,7 @@
   
   
     <li class="md-tabs__item">
-      <a href=".." class="md-tabs__link">
+      <a href="../.." class="md-tabs__link">
         
   
     
@@ -254,11 +252,9 @@
         
   
   
-    
   
-  
-    <li class="md-tabs__item md-tabs__item--active">
-      <a href="./" class="md-tabs__link">
+    <li class="md-tabs__item">
+      <a href="../../deploying/" class="md-tabs__link">
         
   
     
@@ -275,7 +271,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../dev-scripts/" class="md-tabs__link">
+      <a href="../../dev-scripts/" class="md-tabs__link">
         
   
     
@@ -292,7 +288,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../developers/" class="md-tabs__link">
+      <a href="../../developers/" class="md-tabs__link">
         
   
     
@@ -309,7 +305,7 @@
   
   
     <li class="md-tabs__item">
-      <a href="../user-stories/" class="md-tabs__link">
+      <a href="../../user-stories/" class="md-tabs__link">
         
   
     
@@ -324,11 +320,13 @@
         
   
   
+    
+  
   
     
     
-      <li class="md-tabs__item">
-        <a href="../ADR/" class="md-tabs__link">
+      <li class="md-tabs__item md-tabs__item--active">
+        <a href="../" class="md-tabs__link">
           
   
     
@@ -369,7 +367,7 @@
 
 <nav class="md-nav md-nav--primary md-nav--lifted" aria-label="Navigation" data-md-level="0">
   <label class="md-nav__title" for="__drawer">
-    <a href=".." title="Generative AI LLM RAG Pattern" class="md-nav__button md-logo" aria-label="Generative AI LLM RAG Pattern" data-md-component="logo">
+    <a href="../.." title="Generative AI LLM RAG Pattern" class="md-nav__button md-logo" aria-label="Generative AI LLM RAG Pattern" data-md-component="logo">
       
   
   <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="m20 22-3.86-1.55c.7-1.53 1.2-3.11 1.51-4.72L20 22M7.86 20.45 4 22l2.35-6.27c.31 1.61.81 3.19 1.51 4.72M12 2s5 2 5 10c0 3.1-.75 5.75-1.67 7.83A2 2 0 0 1 13.5 21h-3a2 2 0 0 1-1.83-1.17C7.76 17.75 7 15.1 7 12c0-8 5-10 5-10m0 10c1.1 0 2-.9 2-2s-.9-2-2-2-2 .9-2 2 .9 2 2 2Z"/></svg>
@@ -399,7 +397,7 @@
   
   
     <li class="md-nav__item">
-      <a href=".." class="md-nav__link">
+      <a href="../.." class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -416,28 +414,10 @@
       
   
   
-    
   
   
-  
-    <li class="md-nav__item md-nav__item--active">
-      
-      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
-      
-      
-      
-        <label class="md-nav__link md-nav__link--active" for="__toc">
-          
-  
-  <span class="md-ellipsis">
-    Deploying the RAG pattern
-  </span>
-  
-
-          <span class="md-nav__icon md-icon"></span>
-        </label>
-      
-      <a href="./" class="md-nav__link md-nav__link--active">
+    <li class="md-nav__item">
+      <a href="../../deploying/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -446,66 +426,6 @@
   
 
       </a>
-      
-        
-
-<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
-  
-  
-  
-  
-    <label class="md-nav__title" for="__toc">
-      <span class="md-nav__icon md-icon"></span>
-      Table of contents
-    </label>
-    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
-      
-        <li class="md-nav__item">
-  <a href="#assumptions" class="md-nav__link">
-    <span class="md-ellipsis">
-      Assumptions
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Assumptions">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#gpus" class="md-nav__link">
-    <span class="md-ellipsis">
-      GPUs
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#gpu-pool-management-wip" class="md-nav__link">
-    <span class="md-ellipsis">
-      GPU pool management (WIP)
-    </span>
-  </a>
-  
-</li>
-        
-          <li class="md-nav__item">
-  <a href="#manual-setup-steps-on-osd" class="md-nav__link">
-    <span class="md-ellipsis">
-      Manual setup steps on OSD
-    </span>
-  </a>
-  
-</li>
-        
-      </ul>
-    </nav>
-  
-</li>
-      
-    </ul>
-  
-</nav>
-      
     </li>
   
 
@@ -517,7 +437,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../dev-scripts/" class="md-nav__link">
+      <a href="../../dev-scripts/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -537,7 +457,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../developers/" class="md-nav__link">
+      <a href="../../developers/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -557,7 +477,7 @@
   
   
     <li class="md-nav__item">
-      <a href="../user-stories/" class="md-nav__link">
+      <a href="../../user-stories/" class="md-nav__link">
         
   
   <span class="md-ellipsis">
@@ -574,6 +494,8 @@
       
   
   
+    
+  
   
   
     
@@ -588,19 +510,22 @@
     
     
       
+        
+        
+      
       
     
     
-    <li class="md-nav__item md-nav__item--nested">
+    <li class="md-nav__item md-nav__item--active md-nav__item--section md-nav__item--nested">
       
         
         
-        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" >
+        <input class="md-nav__toggle md-toggle " type="checkbox" id="__nav_6" checked>
         
           
           
           <div class="md-nav__link md-nav__container">
-            <a href="../ADR/" class="md-nav__link ">
+            <a href="../" class="md-nav__link ">
               
   
   <span class="md-ellipsis">
@@ -611,13 +536,13 @@
             </a>
             
               
-              <label class="md-nav__link " for="__nav_6" id="__nav_6_label" tabindex="0">
+              <label class="md-nav__link " for="__nav_6" id="__nav_6_label" tabindex="">
                 <span class="md-nav__icon md-icon"></span>
               </label>
             
           </div>
         
-        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="false">
+        <nav class="md-nav" data-md-level="1" aria-labelledby="__nav_6_label" aria-expanded="true">
           <label class="md-nav__title" for="__nav_6">
             <span class="md-nav__icon md-icon"></span>
             ADR
@@ -630,10 +555,30 @@
                 
   
   
+    
   
   
-    <li class="md-nav__item">
-      <a href="../ADR/ADR_000/" class="md-nav__link">
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    This title can be changed, please make it of the form ADR 000: title
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
@@ -642,6 +587,53 @@
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#context-and-problem-statement" class="md-nav__link">
+    <span class="md-ellipsis">
+      Context and Problem Statement
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#considered-options" class="md-nav__link">
+    <span class="md-ellipsis">
+      Considered Options
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#decision-outcome" class="md-nav__link">
+    <span class="md-ellipsis">
+      Decision Outcome
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
     </li>
   
 
@@ -671,6 +663,8 @@
   
   
   
+    
+  
   
     <label class="md-nav__title" for="__toc">
       <span class="md-nav__icon md-icon"></span>
@@ -679,44 +673,29 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
-  <a href="#assumptions" class="md-nav__link">
+  <a href="#context-and-problem-statement" class="md-nav__link">
     <span class="md-ellipsis">
-      Assumptions
-    </span>
-  </a>
-  
-    <nav class="md-nav" aria-label="Assumptions">
-      <ul class="md-nav__list">
-        
-          <li class="md-nav__item">
-  <a href="#gpus" class="md-nav__link">
-    <span class="md-ellipsis">
-      GPUs
+      Context and Problem Statement
     </span>
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#gpu-pool-management-wip" class="md-nav__link">
+      
+        <li class="md-nav__item">
+  <a href="#considered-options" class="md-nav__link">
     <span class="md-ellipsis">
-      GPU pool management (WIP)
+      Considered Options
     </span>
   </a>
   
 </li>
-        
-          <li class="md-nav__item">
-  <a href="#manual-setup-steps-on-osd" class="md-nav__link">
+      
+        <li class="md-nav__item">
+  <a href="#decision-outcome" class="md-nav__link">
     <span class="md-ellipsis">
-      Manual setup steps on OSD
+      Decision Outcome
     </span>
   </a>
-  
-</li>
-        
-      </ul>
-    </nav>
   
 </li>
       
@@ -735,7 +714,7 @@
                   
 
   
-    <a href="https://github.com/opendatahub-io-contrib/genai-llm-rag-pattern/edit/main/docs/deploying.md" title="Edit this page" class="md-content__button md-icon">
+    <a href="https://github.com/opendatahub-io-contrib/genai-llm-rag-pattern/edit/main/docs/ADR/ADR_000.md" title="Edit this page" class="md-content__button md-icon">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M10 20H6V4h7v5h5v3.1l2-2V8l-6-6H6c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h4v-2m10.2-7c.1 0 .3.1.4.2l1.3 1.3c.2.2.2.6 0 .8l-1 1-2.1-2.1 1-1c.1-.1.2-.2.4-.2m0 3.9L14.1 23H12v-2.1l6.1-6.1 2.1 2.1Z"/></svg>
     </a>
@@ -744,33 +723,22 @@
     
       
     
-    <a href="https://github.com/opendatahub-io-contrib/genai-llm-rag-pattern/raw/main/docs/deploying.md" title="View source of this page" class="md-content__button md-icon">
+    <a href="https://github.com/opendatahub-io-contrib/genai-llm-rag-pattern/raw/main/docs/ADR/ADR_000.md" title="View source of this page" class="md-content__button md-icon">
       
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M17 18c.56 0 1 .44 1 1s-.44 1-1 1-1-.44-1-1 .44-1 1-1m0-3c-2.73 0-5.06 1.66-6 4 .94 2.34 3.27 4 6 4s5.06-1.66 6-4c-.94-2.34-3.27-4-6-4m0 6.5a2.5 2.5 0 0 1-2.5-2.5 2.5 2.5 0 0 1 2.5-2.5 2.5 2.5 0 0 1 2.5 2.5 2.5 2.5 0 0 1-2.5 2.5M9.27 20H6V4h7v5h5v4.07c.7.08 1.36.25 2 .49V8l-6-6H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h4.5a8.15 8.15 0 0 1-1.23-2Z"/></svg>
     </a>
   
 
 
-  <h1>Deploying the RAG pattern</h1>
-
-<h2 id="assumptions">Assumptions<a class="headerlink" href="#assumptions" title="Permanent link">¤</a></h2>
-<h3 id="gpus">GPUs<a class="headerlink" href="#gpus" title="Permanent link">¤</a></h3>
-<p>The current demonstration relies on <a href="https://github.com/Dao-AILab/flash-attention"><code>flash-attention</code></a> to decrease memory consumption for the LLM models. Today support to this limited to specific Nvidia GPUs which this system can work with. GPUs which are known to be good include:</p>
-<ul>
-<li>Nvidia L40S</li>
-<li>Nvidia A100</li>
-<li>Nvidia H100/H200</li>
-</ul>
-<p>Note: The V100 GPUs are not supported.</p>
-<h3 id="gpu-pool-management-wip">GPU pool management (WIP)<a class="headerlink" href="#gpu-pool-management-wip" title="Permanent link">¤</a></h3>
-<p>The pattern today allows GPU pools to be managed for scale-out computing via <a href="https://github.com/project-codeflare/multi-cluster-app-dispatcher/">MCAD</a> and <a href="https://github.com/project-codeflare/instascale">Instascale</a>. It is important to note that this is designed primarily to manage scaling for batch workloads.</p>
-<p>This works where:</p>
-<ol>
-<li>The cluster auto-scaler is enabled (e.g. using the assisted installer into your own tenancy on AWS / GCP)</li>
-<li>Clusters managed via OpenShift Cluster Manager (e.g. ROSA, ARO and OSD)</li>
-</ol>
-<h3 id="manual-setup-steps-on-osd">Manual setup steps on OSD<a class="headerlink" href="#manual-setup-steps-on-osd" title="Permanent link">¤</a></h3>
-<p>TBC</p>
+<h1 id="this-title-can-be-changed-please-make-it-of-the-form-adr-000-title">This title can be changed, please make it of the form <code>ADR 000: title</code><a class="headerlink" href="#this-title-can-be-changed-please-make-it-of-the-form-adr-000-title" title="Permanent link">¤</a></h1>
+<p>All other headings below cannot be changed.
+This template is intended to be a <code>KISS</code> template to not burden the end user.</p>
+<h2 id="context-and-problem-statement">Context and Problem Statement<a class="headerlink" href="#context-and-problem-statement" title="Permanent link">¤</a></h2>
+<p>Write about the context and problem statement.</p>
+<h2 id="considered-options">Considered Options<a class="headerlink" href="#considered-options" title="Permanent link">¤</a></h2>
+<p>Multiple options should be considered.</p>
+<h2 id="decision-outcome">Decision Outcome<a class="headerlink" href="#decision-outcome" title="Permanent link">¤</a></h2>
+<p>Document the outcome.</p>
 
 
 
@@ -791,7 +759,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">April 5, 2024</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">May 15, 2024</span>
   </span>
 
     
@@ -844,10 +812,10 @@
     </div>
     
     
-    <script id="__config" type="application/json">{"base": "..", "features": ["content.code.annotate", "navigation.tracking", "navigation.top", "navigation.indexes", "navigation.tabs", "navigation.tabs.sticky", "header.autohide", "content.action.edit", "content.action.view", "content.code.copy"], "search": "../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
+    <script id="__config" type="application/json">{"base": "../..", "features": ["content.code.annotate", "navigation.tracking", "navigation.top", "navigation.indexes", "navigation.tabs", "navigation.tabs.sticky", "header.autohide", "content.action.edit", "content.action.view", "content.code.copy"], "search": "../../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../assets/javascripts/bundle.5cfa9459.min.js"></script>
+      <script src="../../assets/javascripts/bundle.5cfa9459.min.js"></script>
       
     
   </body>
