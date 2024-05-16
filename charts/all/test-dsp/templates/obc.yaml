@@ -1,14 +1,24 @@
+# apiVersion: objectbucket.io/v1alpha1
+# kind: ObjectBucketClaim
+# metadata:
+#   labels:
+#     app: noobaa
+#     bucket-provisioner: openshift-storage.noobaa.io-obc
+#     noobaa-domain: openshift-storage.noobaa.io
+#   name: test-obcs
+#   namespace: {{ .Values.dsp.name }}
+# spec:
+#   additionalConfig:
+#     bucketclass: default-bucket
+#   bucketName: test-obcs-{{ .Values.dsp.name }}
+#   storageClassName: openshift-storage.noobaa.io
 apiVersion: objectbucket.io/v1alpha1
 kind: ObjectBucketClaim
 metadata:
-  labels:
-    app: noobaa
-    bucket-provisioner: openshift-storage.noobaa.io-obc
-    noobaa-domain: openshift-storage.noobaa.io
-  name: test-obcs
+  name: test2
   namespace: {{ .Values.dsp.name }}
 spec:
+  generateBucketName: test2
+  storageClassName: openshift-storage.noobaa.io
   additionalConfig:
     bucketclass: default-bucket
-  bucketName: test-obcs-{{ .Values.dsp.name }}
-  storageClassName: openshift-storage.noobaa.io
