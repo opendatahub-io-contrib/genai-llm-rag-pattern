@@ -5,11 +5,10 @@ metadata:
     app: noobaa
     bucket-provisioner: openshift-storage.noobaa.io-obc
     noobaa-domain: openshift-storage.noobaa.io
-  name: test-obc
+  name: test-obcs
   namespace: {{ .Values.dsp.name }}
 spec:
   additionalConfig:
     bucketclass: default-bucket
-  bucketName: test-obc-{{ .Values.dsp.name }}
-  objectBucketName: obc-default-test-obc
+  bucketName: test-obcs-{{ .Values.dsp.name }}
   storageClassName: openshift-storage.noobaa.io
