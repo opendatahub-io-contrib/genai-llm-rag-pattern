@@ -21,4 +21,4 @@ spec:
   generateBucketName: test2
   storageClassName: openshift-storage.noobaa.io
   additionalConfig:
-    bucketclass: default-bucket
+    bucketclass:  noobaa-default-bucket-class
