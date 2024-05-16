@@ -1,18 +1,20 @@
+
 apiVersion: noobaa.io/v1alpha1
 kind: BackingStore
 metadata:
-  name: local-backingstore
+  name: mcg-backingstore
   namespace: openshift-storage
   finalizers:
     - noobaa.io/finalizer
   labels:
     app: noobaa
 spec:
+{{ if .Values.global.objectStorage.pvcStorage }}
   pvPool:
-    numVolumes: 3
+    numVolumes: {{ .Values.global.objectStorage.volumes }}
     resources:
       requests:
-        storage: 50Gi
-    secret: {}
-    storageClass: gp3
+        storage: {{ .Values.global.objectStorage.storagePool }}
+    storageClass: {{ .Values.global.objectStorage.backingStorageClass }}
   type: pv-pool
+{{ end }}

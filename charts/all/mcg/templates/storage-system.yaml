@@ -1,3 +1,4 @@
+{{ if not .Values.global.objectStorage.existingODF }}
 apiVersion: odf.openshift.io/v1alpha1
 kind: StorageSystem
 metadata:
@@ -7,3 +8,4 @@ spec:
   kind: storagecluster.ocs.openshift.io/v1
   name: ocs-storagecluster
   namespace: openshift-storage
+{{ end }}

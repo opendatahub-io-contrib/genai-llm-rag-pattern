@@ -5,16 +5,18 @@ global:
     syncPolicy: Automatic
     installPlanApproval: Automatic
 
+  objectStorage:
+    # Whether or not to use PVC storage
+    pvcStorage: true
+    replicas: 3
+    storagePool: 50Gi
+    backingStorageClass: "ocs-external-storagecluster-ceph-rbd"
+    # IF ODF exists we don't need to deploy an storage system
+    existingODF: true
+    odfStorageSystem: "ocs-external-storagecluster-storagesystem"
+
 main:
   clusterGroupName: hub
   multiSourceConfig:
     enabled: true
-
-objectStorage:
-  replicas: 3
-  storagePool: 50Gi
-  
-  odfStorageClass: ""
-  backingStorageClass: ""
-
 
