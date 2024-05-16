@@ -1,0 +1,20 @@
+
+
+
+secretStore:
+  name: vault-backend
+  kind: ClusterSecretStore
+
+# Secret provisioned for the AWS Controller for Kubernetes - S3 
+# Begin global parameters
+
+
+dsp:
+  name: test-project
+  description: "My dsp test project"
+  bucketName: bucket
+  notebookStorage: '20Gi'
+
+
+# https://github.com/openshift-ai-examples/openshift-ai-examples/blob/main/openshift-ai-deploy-llm/manifests/3-notebook-template.yaml
+

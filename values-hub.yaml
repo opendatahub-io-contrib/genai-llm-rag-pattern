@@ -54,6 +54,8 @@ clusterGroup:
       channel: production
       source: certified-operators
 
+
+
     # rhdh:
     #   name: rhdh
     #   namespace: rhdh-operator
@@ -109,7 +111,12 @@ clusterGroup:
       namespace: redhat-ods-operator
       project: hub
       path: charts/all/rhoai
-
+    # Example project
+    test-dsp:
+      name: test-dsp
+      namespace: default
+      project: hub
+      path: charts/all/test-dsp
   imperative:
     # NOTE: We *must* use lists and not hashes. As hashes lose ordering once parsed by helm
     # The default schedule is every 10 minutes: imperative.schedule
