@@ -1,6 +1,4 @@
 
-
-
 secretStore:
   name: vault-backend
   kind: ClusterSecretStore
@@ -12,7 +10,6 @@ secretStore:
 dsp:
   name: test-project
   description: "My dsp test project"
-  bucketName: bucket
   notebookStorage: '20Gi'
 
 
