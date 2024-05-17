@@ -10,6 +10,10 @@ vault:
   server:
     logLevel: "debug"
     logFormat: "json"
+    auditStorage:
+      enabled: true
+      # Size of the PVC created
+      size: 100Gi
     extraEnvironmentVars:
       VAULT_CACERT: /var/run/secrets/kubernetes.io/serviceaccount/service-ca.crt
       VAULT_ADDR: https://vault.vault.svc.cluster.local:8200

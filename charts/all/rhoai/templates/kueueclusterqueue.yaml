@@ -13,6 +13,8 @@ spec:
         nominalQuota: 8
       - name: "memory"
         nominalQuota: 64Gi
+      - name: "nvidia.com/gpu"
+        nominalQuota: 0
 ## Default example covering generic nvidia gpus
 #   - coveredResources: ["cpu", "memory", "nvidia.com/gpu"]
 #     flavors:
