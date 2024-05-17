@@ -5,7 +5,7 @@ metadata:
 spec:
   namespaceSelector: {}  # match all.
   resourceGroups:
-  - coveredResources: ["cpu", "memory"]
+  - coveredResources: ["cpu", "memory", "nvidia.com/gpu"]
     flavors:
     - name: "default-flavor"
       resources:
