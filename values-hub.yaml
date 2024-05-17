@@ -130,6 +130,12 @@ clusterGroup:
       namespace: default
       project: hub
       path: charts/all/test-dsp
+
+    gpu-operator-config:
+      name: gpu-operator-config
+      namespace: default
+      project: hub
+      path: charts/all/gpu-operator
   imperative:
     # NOTE: We *must* use lists and not hashes. As hashes lose ordering once parsed by helm
     # The default schedule is every 10 minutes: imperative.schedule
