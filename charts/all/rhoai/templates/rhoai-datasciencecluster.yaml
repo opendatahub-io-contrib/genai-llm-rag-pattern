@@ -4,6 +4,8 @@ metadata:
   labels:
     app.kubernetes.io/part-of: rhods-operator
     app.kubernetes.io/created-by: rhods-operator
+  annotations:
+    argocd.argoproj.io/sync-wave: "5"
   name: data-science-cluster
 spec:
   components:
