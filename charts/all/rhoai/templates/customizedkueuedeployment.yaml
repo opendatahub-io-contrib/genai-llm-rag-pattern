@@ -11,12 +11,6 @@ metadata:
     app.opendatahub.io/kueue: "true"
   name: kueue-controller-manager
   namespace: redhat-ods-applications
-  ownerReferences:
-  - apiVersion: datasciencecluster.opendatahub.io/v1
-    blockOwnerDeletion: true
-    controller: true
-    kind: DataScienceCluster
-    name: data-science-cluster
 spec:
   progressDeadlineSeconds: 600
   replicas: 1
