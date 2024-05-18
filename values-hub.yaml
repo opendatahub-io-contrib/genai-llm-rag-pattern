@@ -150,10 +150,10 @@ clusterGroup:
       # verbosity: "-v"
   managedClusterGroups:
     exampleRegion:
-      name: group-one
+      name: workloads
       acmlabels:
       - name: clusterGroup
-        value: group-one
+        value: workload
       helmOverrides:
       - name: clusterGroup.isHubCluster
         value: false
