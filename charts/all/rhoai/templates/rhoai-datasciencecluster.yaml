@@ -11,10 +11,12 @@ spec:
   components:
     codeflare:
       managementState: Managed
+{{ if  .Values.clusterGroup.isHubCluster }}
     dashboard:
       managementState: Managed
     datasciencepipelines:
       managementState: Managed
+{{ end }}
     kserve:
       serving:
         ingressGateway:
@@ -31,8 +33,10 @@ spec:
       managementState: Managed
     trustyai:
       managementState: Managed
+{{ if  .Values.clusterGroup.isHubCluster }} 
     workbenches:
       managementState: Managed
+{{ end }}
 {{ if .Values.rhoai.customizedKueue }}
 {{ else }}
     kueue:

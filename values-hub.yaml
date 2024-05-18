@@ -9,8 +9,6 @@ clusterGroup:
   - openshift-pipelines
   - openshift-storage
   - openshift-nfd
-  - minio
-  - minio-operator
   - nvidia-gpu-operator
   - openshift-serverless
   - redis
