@@ -149,7 +149,7 @@ clusterGroup:
       timeout: 234
       # verbosity: "-v"
   managedClusterGroups:
-    exampleRegion:
+    workloadRegion:
       name: workloads
       acmlabels:
       - name: clusterGroup
