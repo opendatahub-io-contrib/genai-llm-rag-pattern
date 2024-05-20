@@ -23,8 +23,10 @@ spec:
           opendatahub.io/dashboard: "true"
           #opendatahub.io/managed: "true"
       data:
-        AWS_ACCESS_KEY_ID: {{ printf "{{ .data.AWS_ACCESS_KEY_ID }}" }}
-        AWS_SECRET_ACCESS_KEY: {{ printf "{{ .data.AWS_SECRET_ACCESS_KEY }}" }}
+        AWS_ACCESS_KEY_ID: >-
+          {{ printf "{{ .data.AWS_ACCESS_KEY_ID | toString }} }}" }}
+        AWS_SECRET_ACCESS_KEY: >-
+          {{ printf "{{ .data.AWS_SECRET_ACCESS_KEY | toString }} }}" }}
   data:
     - secretKey: AWS_ACCESS_KEY_ID
       remoteRef:
