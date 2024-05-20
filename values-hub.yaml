@@ -123,11 +123,17 @@ clusterGroup:
       project: hub
       path: charts/all/rhoai
     # Example project
-    test-dsp:
-      name: test-dsp
+    test-dsp-a:
+      name: test-dsp-a
       namespace: default
       project: hub
-      path: charts/all/test-dsp
+      path: charts/all/test-dsp-a
+
+    test-dsp-b:
+      name: test-dsp-b
+      namespace: default
+      project: hub
+      path: charts/all/test-dsp-b
 
     gpu-operator-config:
       name: gpu-operator-config
