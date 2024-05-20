@@ -12,6 +12,10 @@
 #     bucketclass: default-bucket
 #   bucketName: test-obcs-{{ .Values.dsp.name }}
 #   storageClassName: openshift-storage.noobaa.io
+
+## OBC lifecycle
+## We presume that the clusters are 'close enough' to manage the lifecycle of objects
+{{ if .Values.clusterGroup.isHubCluster }}
 apiVersion: objectbucket.io/v1alpha1
 kind: ObjectBucketClaim
 metadata:
@@ -23,3 +27,4 @@ spec:
   storageClassName: openshift-storage.noobaa.io
   additionalConfig:
     bucketclass:  noobaa-default-bucket-class
+{{ end }}

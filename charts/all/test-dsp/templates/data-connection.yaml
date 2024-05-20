@@ -19,3 +19,36 @@
 #   resourceVersion: "178464"
 #   uid: da7dd0a8-7256-48d0-ac24-2aa95f7436c1
 # type: Opaque
+
+apiVersion: "external-secrets.io/v1beta1"
+kind: ExternalSecret
+metadata:
+  name: {{ .Values.dsp.name }}-data-connnection-eso
+  namespace: {{ .Values.dsp.name }}
+  annotations:
+    argocd.argoproj.io/sync-wave: '-10'
+spec:
+  refreshInterval: 15s
+  secretStoreRef:
+    name: {{ .Values.secretStore.name }}
+    kind: {{ .Values.secretStore.kind }}
+  target:
+    name: {{ .Values.dsp.name }}-data-connnection
+    template:
+      type: Opaque
+
+      metadata:
+        annotations: {}
+        labels: {}
+      data:
+        AWS_ACCESS_KEY_ID: {{ .data.AWS_ACCESS_KEY_ID }}
+        AWS_SECRET_ACCESS_KEY: {{ .data.AWS_SECRET_ACCESS_KEY }}
+  data:
+    - secretKey: AWS_ACCESS_KEY_ID
+      remoteRef:
+        key: {{ .Values.dsp.dataConnectionESOKey }}
+        property: AWS_ACCESS_KEY_ID
+    - secretKey: AWS_SECRET_ACCESS_KEY
+      remoteRef:
+        key: {{ .Values.dsp.dataConnectionESOKey }}
+        property: AWS_SECRET_ACCESS_KEY

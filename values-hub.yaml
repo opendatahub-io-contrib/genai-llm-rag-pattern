@@ -150,7 +150,7 @@ clusterGroup:
       # verbosity: "-v"
   managedClusterGroups:
     workloadRegion:
-      name: workloads
+      name: workload01
       acmlabels:
       - name: clusterGroup
         value: workload

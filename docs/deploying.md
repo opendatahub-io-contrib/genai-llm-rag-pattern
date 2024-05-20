@@ -51,4 +51,4 @@ A valid `KUBECONFIG` is required making `oc` (recommended) or `kubectl` strongly
 
 ## REQUIRED configuration in order to function
 
-### Multi cloud object gateway
+### Multicloud Object Gateway

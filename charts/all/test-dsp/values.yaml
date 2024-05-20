@@ -11,6 +11,8 @@ dsp:
   name: test-project
   description: "My dsp test project"
   notebookStorage: '20Gi'
+  pushSecret: False
+  dataConnectionESOKey: ''secret/data/global/test-project-aws'
 
 
 # https://github.com/openshift-ai-examples/openshift-ai-examples/blob/main/openshift-ai-deploy-llm/manifests/3-notebook-template.yaml

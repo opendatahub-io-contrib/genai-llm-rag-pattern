@@ -1,5 +1,5 @@
 apiVersion: v2
-description: Example helm chart for configuring a OpenShift AI project
+description: Example helm chart for configuring a OpenShift AI project. To be replicated on both clusters.
 name: test-dsp
 type: application
 

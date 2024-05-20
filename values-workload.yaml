@@ -25,10 +25,6 @@ clusterGroup:
       name: openshift-pipelines-operator-rh
       namespace: openshift-operators
 
-    odf:
-      name: odf-operator
-      namespace: openshift-storage
-
     serverless:
       channel: stable
       name: serverless-operator
@@ -60,7 +56,6 @@ clusterGroup:
       namespace: golang-external-secrets
       project: eso
       path: common/golang-external-secrets
-
     rhoai:
       name: rhoai
       namespace: redhat-ods-operator
@@ -71,6 +66,7 @@ clusterGroup:
       namespace: default
       project: hub
       path: charts/all/gpu-operator
+
   imperative:
     # NOTE: We *must* use lists and not hashes. As hashes lose ordering once parsed by helm
     # The default schedule is every 10 minutes: imperative.schedule
