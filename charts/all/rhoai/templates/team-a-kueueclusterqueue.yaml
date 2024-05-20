@@ -1,18 +1,20 @@
 apiVersion: kueue.x-k8s.io/v1beta1
 kind: ClusterQueue
 metadata:
-  name: "cluster-queue"
+  name: "cluster-queue-a"
+  
   annotations:
     argocd.argoproj.io/sync-wave: "10"
 spec:
   namespaceSelector: {}  # match all.
+  cohort: "team-ab" # allow borrowing of resources from team-b
   resourceGroups:
   - coveredResources: ["cpu", "memory", "nvidia.com/gpu"]
     flavors:
     - name: "default-flavor"
       resources:
       - name: "cpu"
-        nominalQuota: 8
+        nominalQuota: 24
       - name: "memory"
         nominalQuota: 64Gi
       - name: "nvidia.com/gpu"

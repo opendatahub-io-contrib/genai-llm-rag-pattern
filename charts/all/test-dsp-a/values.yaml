@@ -8,7 +8,7 @@ secretStore:
 
 
 dsp:
-  name: test-project
+  name: test-project-a
   description: "My dsp test project"
   notebookStorage: '20Gi'
   pushSecret: False
