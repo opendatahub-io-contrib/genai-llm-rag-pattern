@@ -1,20 +1,3 @@
-# apiVersion: objectbucket.io/v1alpha1
-# kind: ObjectBucketClaim
-# metadata:
-#   labels:
-#     app: noobaa
-#     bucket-provisioner: openshift-storage.noobaa.io-obc
-#     noobaa-domain: openshift-storage.noobaa.io
-#   name: test-obcs
-#   namespace: {{ .Values.dsp.name }}
-# spec:
-#   additionalConfig:
-#     bucketclass: default-bucket
-#   bucketName: test-obcs-{{ .Values.dsp.name }}
-#   storageClassName: openshift-storage.noobaa.io
-
-## OBC lifecycle
-## We presume that the clusters are 'close enough' to manage the lifecycle of objects
 {{ if .Values.clusterGroup.isHubCluster }}
 apiVersion: objectbucket.io/v1alpha1
 kind: ObjectBucketClaim
