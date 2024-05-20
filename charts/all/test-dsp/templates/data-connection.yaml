@@ -20,14 +20,14 @@ spec:
           openshift.io/display-name: aws-connection-noobaa
         labels:
           opendatahub.io/dashboard: "true"
-          pendatahub.io/managed: "true"
+          opendatahub.io/managed: "true"
       data:
         AWS_ACCESS_KEY_ID: >-
           {{ printf "{{ .data.AWS_ACCESS_KEY_ID | toString }} }}" }}
         AWS_SECRET_ACCESS_KEY: >-
           {{ printf "{{ .data.AWS_SECRET_ACCESS_KEY | toString }} }}" }}
         AWS_DEFAULT_REGION: ""
-        AWS_S3_BUCKET: "{{ .Values.dsp.name }}-obc"
+        AWS_S3_BUCKET: "{{ .Values.dsp.name }}-bucket"
         AWS_S3_ENDPOINT: 	https://s3-openshift-storage.{{ .Values.global.hubClusterDomain }}
 
   data:
