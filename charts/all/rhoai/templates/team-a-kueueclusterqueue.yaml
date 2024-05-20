@@ -8,6 +8,8 @@ metadata:
 spec:
   namespaceSelector: {}  # match all.
   cohort: "team-ab" # allow borrowing of resources from team-b
+  preemption:
+    reclaimWithinCohort: Any
   resourceGroups:
   - coveredResources: ["cpu", "memory", "nvidia.com/gpu"]
     flavors:
