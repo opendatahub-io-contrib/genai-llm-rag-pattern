@@ -11,16 +11,16 @@ spec:
     name: {{ .Values.secretStore.name }}
     kind: {{ .Values.secretStore.kind }}
   target:
-    name: {{ .Values.dsp.name }}-data-connnection
+    name:  aws-connection-noobaa
     template:
       type: Opaque
       metadata:
         annotations:
           opendatahub.io/connection-type: s3
-          openshift.io/display-name: {{ .Values.dsp.name }}-data-connnection
+          openshift.io/display-name: aws-connection-noobaa
         labels:
           opendatahub.io/dashboard: "true"
-          #opendatahub.io/managed: "true"
+          pendatahub.io/managed: "true"
       data:
         AWS_ACCESS_KEY_ID: >-
           {{ printf "{{ .data.AWS_ACCESS_KEY_ID | toString }} }}" }}
