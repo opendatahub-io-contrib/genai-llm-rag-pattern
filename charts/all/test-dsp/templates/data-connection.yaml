@@ -14,7 +14,6 @@ spec:
     name: {{ .Values.dsp.name }}-data-connnection
     template:
       type: Opaque
-
       metadata:
         annotations:
           opendatahub.io/connection-type: s3
@@ -27,6 +26,10 @@ spec:
           {{ printf "{{ .data.AWS_ACCESS_KEY_ID | toString }} }}" }}
         AWS_SECRET_ACCESS_KEY: >-
           {{ printf "{{ .data.AWS_SECRET_ACCESS_KEY | toString }} }}" }}
+        AWS_DEFAULT_REGION: ""
+        AWS_S3_BUCKET: "{{ .Values.dsp.name }}-obc"
+        AWS_S3_ENDPOINT: 	https://s3-openshift-storage.{{ .Values.global.hubClusterDomain }}
+
   data:
     - secretKey: AWS_ACCESS_KEY_ID
       remoteRef:
