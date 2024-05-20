@@ -32,11 +32,11 @@ spec:
   data:
     - secretKey: AWS_ACCESS_KEY_ID
       remoteRef:
-        key: {{ .Values.dsp.dataConnectionESOKey }}
+        key: "{{ .Values.dsp.dataConnectionESOKey }}{{ .Values.dsp.name }}-aws"
         property: AWS_ACCESS_KEY_ID
     - secretKey: AWS_SECRET_ACCESS_KEY
       remoteRef:
-        key: {{ .Values.dsp.dataConnectionESOKey }}
+        key: "{{ .Values.dsp.dataConnectionESOKey }}{{ .Values.dsp.name }}-aws"
         property: AWS_SECRET_ACCESS_KEY
 #   AWS_ACCESS_KEY_ID: b0VQQ2lpamo2NnpwYnVNUUR0ZU0=
 #   AWS_DEFAULT_REGION: ""

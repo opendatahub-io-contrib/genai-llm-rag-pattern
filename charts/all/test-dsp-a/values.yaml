@@ -11,7 +11,7 @@ dsp:
   name: test-project-a
   description: "My dsp test project"
   notebookStorage: '20Gi'
-  pushSecret: False
+  pushSecret: false
   dataConnectionESOKey: 'secret/data/global/test-project-aws'
 
 
