@@ -7,4 +7,4 @@ metadata:
     kueue.x-k8s.io/default-queue: 'true'
     argocd.argoproj.io/sync-wave: "10"
 spec:
-  clusterQueue: cluster-queue
+  clusterQueue: cluster-queue-a
