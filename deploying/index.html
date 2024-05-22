@@ -20,7 +20,7 @@
       
       
       <link rel="icon" href="../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.22">
+      <meta name="generator" content="mkdocs-1.6.0, mkdocs-material-9.5.24">
     
     
       
@@ -28,7 +28,7 @@
       
     
     
-      <link rel="stylesheet" href="../assets/stylesheets/main.732c4fb1.min.css">
+      <link rel="stylesheet" href="../assets/stylesheets/main.6543a935.min.css">
       
         
         <link rel="stylesheet" href="../assets/stylesheets/palette.06af60db.min.css">
@@ -102,7 +102,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#assumptions" class="md-skip">
+        <a href="#overview" class="md-skip">
           Skip to content
         </a>
       
@@ -461,6 +461,15 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      Overview
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#assumptions" class="md-nav__link">
     <span class="md-ellipsis">
       Assumptions
@@ -489,9 +498,42 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#manual-setup-steps-on-osd" class="md-nav__link">
+  <a href="#bootstrap-machine" class="md-nav__link">
     <span class="md-ellipsis">
-      Manual setup steps on OSD
+      Bootstrap machine
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#setup-workflow" class="md-nav__link">
+    <span class="md-ellipsis">
+      Setup workflow
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#required-configuration-in-order-to-function" class="md-nav__link">
+    <span class="md-ellipsis">
+      REQUIRED configuration in order to function
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="REQUIRED configuration in order to function">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#multicloud-object-gateway" class="md-nav__link">
+    <span class="md-ellipsis">
+      Multicloud Object Gateway
     </span>
   </a>
   
@@ -679,6 +721,15 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#overview" class="md-nav__link">
+    <span class="md-ellipsis">
+      Overview
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#assumptions" class="md-nav__link">
     <span class="md-ellipsis">
       Assumptions
@@ -707,9 +758,42 @@
 </li>
         
           <li class="md-nav__item">
-  <a href="#manual-setup-steps-on-osd" class="md-nav__link">
+  <a href="#bootstrap-machine" class="md-nav__link">
     <span class="md-ellipsis">
-      Manual setup steps on OSD
+      Bootstrap machine
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#setup-workflow" class="md-nav__link">
+    <span class="md-ellipsis">
+      Setup workflow
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#required-configuration-in-order-to-function" class="md-nav__link">
+    <span class="md-ellipsis">
+      REQUIRED configuration in order to function
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="REQUIRED configuration in order to function">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#multicloud-object-gateway" class="md-nav__link">
+    <span class="md-ellipsis">
+      Multicloud Object Gateway
     </span>
   </a>
   
@@ -753,6 +837,8 @@
 
   <h1>Deploying the RAG pattern</h1>
 
+<h2 id="overview">Overview<a class="headerlink" href="#overview" title="Permanent link">¤</a></h2>
+<p>This project uses the <a href="https://validatedpatterns.io">validated patterns operator</a>, an opinionated gitops system, to deploy onto an OpenShift cluster.</p>
 <h2 id="assumptions">Assumptions<a class="headerlink" href="#assumptions" title="Permanent link">¤</a></h2>
 <h3 id="gpus">GPUs<a class="headerlink" href="#gpus" title="Permanent link">¤</a></h3>
 <p>The current demonstration relies on <a href="https://github.com/Dao-AILab/flash-attention"><code>flash-attention</code></a> to decrease memory consumption for the LLM models. Today support to this limited to specific Nvidia GPUs which this system can work with. GPUs which are known to be good include:</p>
@@ -769,8 +855,38 @@
 <li>The cluster auto-scaler is enabled (e.g. using the assisted installer into your own tenancy on AWS / GCP)</li>
 <li>Clusters managed via OpenShift Cluster Manager (e.g. ROSA, ARO and OSD)</li>
 </ol>
-<h3 id="manual-setup-steps-on-osd">Manual setup steps on OSD<a class="headerlink" href="#manual-setup-steps-on-osd" title="Permanent link">¤</a></h3>
-<p>TBC</p>
+<h3 id="bootstrap-machine">Bootstrap machine<a class="headerlink" href="#bootstrap-machine" title="Permanent link">¤</a></h3>
+<p><code>git</code> and <code>podman</code> are required on the bootstrap machine.
+A valid <code>KUBECONFIG</code> is required making <code>oc</code> (recommended) or <code>kubectl</code> strongly recommended.</p>
+<h2 id="setup-workflow">Setup workflow<a class="headerlink" href="#setup-workflow" title="Permanent link">¤</a></h2>
+<ol>
+<li>
+<p>Start <code>podman</code></p>
+</li>
+<li>
+<p><strong>Fork</strong> the <a href="https://github.com/opendatahub-io-contrib/genai-llm-rag-pattern">git repository</a></p>
+</li>
+<li>
+<p>Forking is required in order to customise the configuration.</p>
+</li>
+<li>
+<p>It is significantly easier to start with a public repository.</p>
+</li>
+<li>
+<p>Clone the forked git repository.</p>
+</li>
+<li>
+<p>Customise the <code>values-global.yaml</code> (see below)</p>
+</li>
+<li>
+<p><code>cp ./values-secret.yaml.template ~/values-secret-gen-llm-rag-pattern.yaml</code> and fill in required secrets</p>
+</li>
+<li>
+<p><code>cd</code> into the repository and <code>./pattern.sh make install</code></p>
+</li>
+</ol>
+<h2 id="required-configuration-in-order-to-function">REQUIRED configuration in order to function<a class="headerlink" href="#required-configuration-in-order-to-function" title="Permanent link">¤</a></h2>
+<h3 id="multicloud-object-gateway">Multicloud Object Gateway<a class="headerlink" href="#multicloud-object-gateway" title="Permanent link">¤</a></h3>
 
 
 
@@ -791,7 +907,7 @@
     <span class="md-icon" title="Last update">
       <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M21 13.1c-.1 0-.3.1-.4.2l-1 1 2.1 2.1 1-1c.2-.2.2-.6 0-.8l-1.3-1.3c-.1-.1-.2-.2-.4-.2m-1.9 1.8-6.1 6V23h2.1l6.1-6.1-2.1-2M12.5 7v5.2l4 2.4-1 1L11 13V7h1.5M11 21.9c-5.1-.5-9-4.8-9-9.9C2 6.5 6.5 2 12 2c5.3 0 9.6 4.1 10 9.3-.3-.1-.6-.2-1-.2s-.7.1-1 .2C19.6 7.2 16.2 4 12 4c-4.4 0-8 3.6-8 8 0 4.1 3.1 7.5 7.1 7.9l-.1.2v1.8Z"/></svg>
     </span>
-    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">April 5, 2024</span>
+    <span class="git-revision-date-localized-plugin git-revision-date-localized-plugin-date">May 20, 2024</span>
   </span>
 
     
@@ -847,7 +963,7 @@
     <script id="__config" type="application/json">{"base": "..", "features": ["content.code.annotate", "navigation.tracking", "navigation.top", "navigation.indexes", "navigation.tabs", "navigation.tabs.sticky", "header.autohide", "content.action.edit", "content.action.view", "content.code.copy"], "search": "../assets/javascripts/workers/search.b8dbb3d2.min.js", "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}}</script>
     
     
-      <script src="../assets/javascripts/bundle.5cfa9459.min.js"></script>
+      <script src="../assets/javascripts/bundle.081f42fc.min.js"></script>
       
     
   </body>
