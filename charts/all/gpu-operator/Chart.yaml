@@ -1,6 +1,6 @@
 apiVersion: v2
-description: A Helm chart for a custom Minio Object store for AI Models
-name: minio
+description: Example helm chart for configuring a OpenShift AI project
+name: test-dsp
 type: application
 
 # This is the chart version. This version number should be incremented each time you make changes
@@ -13,10 +13,3 @@ version: 0.1.0
 # follow Semantic Versioning. They should reflect the version the application is using.
 # It is recommended to use it with quotes.
 appVersion: "1.0.0"
-dependencies:
-- name: operator
-  repository: https://operator.min.io
-  version: "5.0.14"
-- name: tenant
-  repository: https://operator.min.io
-  version: "5.0.14"

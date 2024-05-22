@@ -7,22 +7,30 @@ clusterGroup:
   - golang-external-secrets
   - redhat-ods-operator
   - openshift-pipelines
+  - openshift-storage
   - openshift-nfd
-  - minio
-  - minio-operator
   - nvidia-gpu-operator
   - openshift-serverless
   - redis
   #- rhdh-operator 
   subscriptions:
+    acm:
+      name: advanced-cluster-management
+      namespace: open-cluster-management
+      channel: release-2.10
     rhoai:
       name: rhods-operator
-      channel: stable
+      # Fast is required for 2.9.0
+      channel: fast
       namespace: openshift-operators
 
     openshift-pipelines:
       name: openshift-pipelines-operator-rh
       namespace: openshift-operators
+
+    odf:
+      name: odf-operator
+      namespace: openshift-storage
 
     serverless:
       channel: stable
@@ -48,6 +56,8 @@ clusterGroup:
       channel: production
       source: certified-operators
 
+
+
     # rhdh:
     #   name: rhdh
     #   namespace: rhdh-operator
@@ -57,6 +67,7 @@ clusterGroup:
   projects:
   - hub
   - rhoai
+  - openshift-storage
   # Explicitly mention the cluster-state based overrides we plan to use for this pattern.
   # We can use self-referential variables because the chart calls the tpl function with these variables defined
   sharedValueFiles:
@@ -78,7 +89,16 @@ clusterGroup:
   #   - '/overrides/values-{{ $.Values.global.hubClusterDomain }}.yaml'
   #   - '/overrides/values-{{ $.Values.global.localClusterDomain }}.yaml'
   applications:
-
+    acm:
+      name: acm
+      namespace: open-cluster-management
+      project: hub
+      path: common/acm
+      ignoreDifferences:
+      - group: internal.open-cluster-management.io
+        kind: ManagedClusterInfo
+        jsonPointers:
+        - /spec/loggingCA
     vault:
       name: vault
       namespace: vault
@@ -92,17 +112,34 @@ clusterGroup:
       path: common/golang-external-secrets
 
     minio:
-      name: minio
-      namespace: minio-operator
-      project: hub
-      path: charts/all/minio
+      name: mcg
+      namespace: openshift-storage
+      project: openshift-storage
+      path: charts/all/mcg
 
     rhoai:
       name: rhoai
       namespace: redhat-ods-operator
       project: hub
       path: charts/all/rhoai
+    # Example project
+    test-dsp-a:
+      name: test-dsp-a
+      namespace: default
+      project: hub
+      path: charts/all/test-dsp-a
 
+    test-dsp-b:
+      name: test-dsp-b
+      namespace: default
+      project: hub
+      path: charts/all/test-dsp-b
+
+    gpu-operator-config:
+      name: gpu-operator-config
+      namespace: default
+      project: hub
+      path: charts/all/gpu-operator
   imperative:
     # NOTE: We *must* use lists and not hashes. As hashes lose ordering once parsed by helm
     # The default schedule is every 10 minutes: imperative.schedule
@@ -118,11 +155,11 @@ clusterGroup:
       timeout: 234
       # verbosity: "-v"
   managedClusterGroups:
-    exampleRegion:
-      name: group-one
+    workloadRegion:
+      name: workload
       acmlabels:
       - name: clusterGroup
-        value: group-one
+        value: workload
       helmOverrides:
       - name: clusterGroup.isHubCluster
         value: false
