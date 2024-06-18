@@ -2,37 +2,37 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
     <url>
          <loc>https://opendatahub-io-contrib.github.io/genai-llm-rag-pattern/</loc>
-         <lastmod>2024-05-22</lastmod>
+         <lastmod>2024-06-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://opendatahub-io-contrib.github.io/genai-llm-rag-pattern/deploying/</loc>
-         <lastmod>2024-05-22</lastmod>
+         <lastmod>2024-06-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://opendatahub-io-contrib.github.io/genai-llm-rag-pattern/dev-scripts/</loc>
-         <lastmod>2024-05-22</lastmod>
+         <lastmod>2024-06-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://opendatahub-io-contrib.github.io/genai-llm-rag-pattern/developers/</loc>
-         <lastmod>2024-05-22</lastmod>
+         <lastmod>2024-06-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://opendatahub-io-contrib.github.io/genai-llm-rag-pattern/user-stories/</loc>
-         <lastmod>2024-05-22</lastmod>
+         <lastmod>2024-06-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://opendatahub-io-contrib.github.io/genai-llm-rag-pattern/ADR/</loc>
-         <lastmod>2024-05-22</lastmod>
+         <lastmod>2024-06-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
     <url>
          <loc>https://opendatahub-io-contrib.github.io/genai-llm-rag-pattern/ADR/ADR_000/</loc>
-         <lastmod>2024-05-22</lastmod>
+         <lastmod>2024-06-18</lastmod>
          <changefreq>daily</changefreq>
     </url>
 </urlset>
