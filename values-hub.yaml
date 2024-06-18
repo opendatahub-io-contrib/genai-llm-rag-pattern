@@ -12,6 +12,7 @@ clusterGroup:
   - nvidia-gpu-operator
   - openshift-serverless
   - redis
+  - test-project
   #- rhdh-operator 
   subscriptions:
     acm:
