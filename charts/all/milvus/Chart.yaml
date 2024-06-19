@@ -27,4 +27,4 @@ appVersion: "1.0.0"
 dependencies:
 - name: milvus-operator
   version: "0.9.16"
-  repository: "ttps://zilliztech.github.io/milvus-operator/"
+  repository: "https://zilliztech.github.io/milvus-operator/"
