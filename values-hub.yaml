@@ -13,6 +13,8 @@ clusterGroup:
   - openshift-serverless
   - redis
   - test-project
+  - milvus-operator
+  - milvus
   #- rhdh-operator 
   subscriptions:
     acm:
@@ -112,6 +114,7 @@ clusterGroup:
       project: hub
       path: common/golang-external-secrets
 
+    # FIXME: rename on redeployment
     minio:
       name: mcg
       namespace: openshift-storage
@@ -123,6 +126,18 @@ clusterGroup:
       namespace: redhat-ods-operator
       project: hub
       path: charts/all/rhoai
+
+    gpu-operator-config:
+      name: gpu-operator-config
+      namespace: default
+      project: hub
+      path: charts/all/gpu-operator
+
+    milvus:
+      name: milvus
+      namespace: milvus-operator # Default to the milvus-operator namespace based on the upstream dependent chart
+      project: hub
+      path: charts/all/milvus
     # Example project
     test-dsp-a:
       name: test-dsp-a
@@ -136,11 +151,7 @@ clusterGroup:
       project: hub
       path: charts/all/test-dsp-b
 
-    gpu-operator-config:
-      name: gpu-operator-config
-      namespace: default
-      project: hub
-      path: charts/all/gpu-operator
+
   imperative:
     # NOTE: We *must* use lists and not hashes. As hashes lose ordering once parsed by helm
     # The default schedule is every 10 minutes: imperative.schedule

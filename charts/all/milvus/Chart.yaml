@@ -22,3 +22,9 @@ version: 0.1.0
 # follow Semantic Versioning. They should reflect the version the application is using.
 # It is recommended to use it with quotes.
 appVersion: "1.0.0"
+
+# Get teh chart installed for the milvus operator
+dependencies:
+- name: milvus-operator
+  version: "0.9.16"
+  repository: "ttps://zilliztech.github.io/milvus-operator/"
