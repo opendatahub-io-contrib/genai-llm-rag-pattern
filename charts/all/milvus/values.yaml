@@ -1,0 +1,5 @@
+
+
+milvus-operator:
+  # has to be overriden as there are implicit assumptions name and full name are the same.
+  fullnameOverride: "milvus"
