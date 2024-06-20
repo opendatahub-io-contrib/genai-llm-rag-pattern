@@ -1,0 +1,27 @@
+# apiVersion: milvus.io/v1beta1
+# kind: Milvus
+# metadata:
+#   name: milvus-test
+#   namespace: milvus
+#   labels:
+#     app: milvus
+# spec:
+#   config: {}
+
+#   dependencies:
+#     storage:
+#       external:
+#         type: s3
+#         endpoint: s3.amazonaws.com
+
+
+#     etcd:
+#       inCluster:
+#         values:
+#           replicaCount: 3
+#           resources:
+#             limits:
+#               cpu: 1
+#               memory: 4Gi
+#         deletionPolicy: Delete
+#         pvcDeletion: true

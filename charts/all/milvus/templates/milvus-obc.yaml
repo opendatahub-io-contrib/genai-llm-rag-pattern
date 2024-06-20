@@ -1,0 +1,13 @@
+{{ if .Values.clusterGroup.isHubCluster }}
+apiVersion: objectbucket.io/v1alpha1
+kind: ObjectBucketClaim
+metadata:
+  name: milvus-obc
+  namespace: milvus
+spec:
+  #generateBucketName: {{ .Values.dsp.name }} 
+  bucketName: milvus
+  storageClassName: openshift-storage.noobaa.io
+  additionalConfig:
+    bucketclass:  noobaa-default-bucket-class
+{{ end }}
