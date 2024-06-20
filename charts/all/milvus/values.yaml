@@ -1,5 +1,0 @@
-
-
-milvus-operator:
-  nameOverride: "milvus-operator"
-  fullnameOverride: "milvus-operator"
