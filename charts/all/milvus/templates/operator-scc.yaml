@@ -11,4 +11,4 @@ seLinuxContext:
 fsGroup:
   type: RunAsAny
 users:
-  - system:serviceaccount:milvus-operator:milvus-milvus-operator
+  - system:serviceaccount:milvus-operator:milvus-operator

@@ -1,0 +1,4 @@
+
+
+milvus-operator:
+  fullnameOverride: "milvus-operator"
