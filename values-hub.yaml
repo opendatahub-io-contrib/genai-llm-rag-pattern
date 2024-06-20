@@ -141,11 +141,11 @@ clusterGroup:
       project: hub
       path: charts/all/gpu-operator
 
-    # milvus-operator:
-    #   name: milvus-operator
-    #   namespace: milvus-operator # Default to the milvus-operator namespace based on the upstream dependent chart
-    #   project: hub
-    #   path: charts/all/milvus-operator
+    milvus-operator:
+      name: milvus-operator
+      namespace: milvus-operator # Default to the milvus-operator namespace based on the upstream dependent chart
+      project: hub
+      path: charts/all/milvus-operator
     # Example project
     test-dsp-a:
       name: test-dsp-a

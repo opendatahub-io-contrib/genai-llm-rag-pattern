@@ -1,0 +1,18 @@
+---
+apiVersion: "external-secrets.io/v1beta1"
+kind: ExternalSecret
+metadata:
+  name: milvus-obc-eso
+  namespace: milvus
+spec:
+  refreshInterval: 15s
+  secretStoreRef:
+    name: {{ .Values.secretStore.name }}
+    kind: {{ .Values.secretStore.kind }}
+  target:
+    name: milvus-obc-clean
+    template:
+      type: Opaque
+  dataFrom:
+  - extract:
+      key: 'secret/data/global/milvus-s3'
