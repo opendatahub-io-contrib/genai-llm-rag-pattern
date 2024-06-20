@@ -17,7 +17,7 @@ spec:
     storage:
       # enable external object storage
       external: true
-      type: S3 # MinIO | S3
+      type: MinIO  # | S3
       # the endpoint of AWS S3
       endpoint: s3.openshift-storage.svc:443
       # the secret storing the access key and secret key
