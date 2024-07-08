@@ -7,7 +7,9 @@ metadata:
     argocd.argoproj.io/sync-options: SkipDryRunOnMissingResource=true
     argocd.argoproj.io/sync-wave: "10"
 spec:
-  namespaceSelector: {}  # match all.
+  namespaceSelector:
+    matchLabels:
+      kubernetes.io/metadata.name: team-a # Matching name of namespace
   cohort: "team-ab" # allow borrowing of resources from team-b
   preemption:
     reclaimWithinCohort: Any
